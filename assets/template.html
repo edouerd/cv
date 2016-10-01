@@ -1,0 +1,57 @@
+{% macro item(i) -%}
+    <li>
+        <div class="meta">
+            <div class="at">{{ i.at }}</div>
+            <div class="when">{{ i.when }}</div>
+            <div class="where">{{ i.where }}</div>
+        </div>
+        <div class="body">
+            <h1 class="title">{{ i.title }}</h1>
+            <p class="desc">{{ i.desc }}</p>
+        </div>
+    </li>
+{%- endmacro %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>francis tseng : cv</title>
+  <link rel="stylesheet" type="text/css" href="../assets/style.css" media="screen">
+</head>
+
+<body>
+  <main role="main">
+    <header>
+        <h1>Francis Tseng</h1>
+        <h4>f@frnsys.com / frnsys.com</h4>
+    </header>
+    <section>
+        <h2>Education</h2>
+        <ul class="education item-list">
+            {% for i in education %}
+                {{ item(i) }}
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Experience</h2>
+        <ul class="experience item-list">
+            {% for i in experience %}
+                {{ item(i) }}
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+  </main>
+</body>
+</html>

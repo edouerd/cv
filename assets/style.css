@@ -1,0 +1,68 @@
+html {
+  padding: 1em;
+  margin: 0;
+  font-family: 'Calibre';
+  color: #222;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.item-list li {
+  margin: 0 0 1em 0;
+  overflow: hidden;
+}
+.item-list li:last-child {
+  margin-bottom: 0;
+}
+.skills li {
+  display: inline-block;
+  width: 49%;
+}
+
+header {
+  padding: 0 2em;
+}
+header h4 {
+  float: right;
+  font-weight: normal;
+  color: #888;
+}
+header h1 {
+  float: left;
+}
+
+section {
+  clear: both;
+  overflow: hidden;
+  margin: 0 0 1em 0;
+}
+section h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+.meta {
+  float: left;
+  width: 20%;
+}
+.body {
+  float: left;
+  width: 80%;
+}
+.body h1 {
+  margin: 0;
+}
+.body p {
+  margin: 0.5em 0 0 0;
+}
+.when, .where {
+  color: #888;
+}
